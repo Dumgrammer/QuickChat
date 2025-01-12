@@ -46,7 +46,9 @@ class _LoginPageState extends State<LoginPage>{
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           _headingWidget(),
-          _credentialForm()
+          _credentialForm(),
+          _loginButton(),
+          _registerButton()
         ],
       ),
     );
@@ -117,6 +119,7 @@ class _LoginPageState extends State<LoginPage>{
   Widget _passwordField(){
     return TextFormField(
       autocorrect: false,
+      obscureText: true,
       style: TextStyle(
         color: Colors.white
       ),
@@ -129,6 +132,45 @@ class _LoginPageState extends State<LoginPage>{
           borderSide: BorderSide(color: Colors.white),
         ),
       ),
+    );
+  }
+
+  Widget _loginButton(){
+    return Container(
+      height: _devHeight * 0.06,
+      width: _devWidth,
+      child: MaterialButton(
+        onPressed: (){}, 
+        color: Colors.blue,
+        child: Text(
+          "Login", 
+          style: TextStyle(
+            fontSize: 18, 
+            fontWeight: FontWeight.w700
+            ),
+          ),
+        ),
+    );
+  }
+
+    Widget _registerButton(){
+    return GestureDetector(
+      onTap: (){
+        print("Wow Grape");
+      },
+      child: Container(
+        height: _devHeight * 0.06,
+        width: _devWidth,
+        child: Text(
+          "Don't have an account yet? Register Here",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w700,
+            color: Colors.white60
+          ),
+        ),
+      )
     );
   }
 
