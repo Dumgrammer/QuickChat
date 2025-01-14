@@ -162,7 +162,49 @@ class _LoginPageState extends State<LoginPage>{
         height: _devHeight * 0.06,
         width: _devWidth,
         child: Text(
-          "Don't have an account yet? Register Here",
+          "Don't have an account yet? Register Here.",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w700,
+            color: Colors.white60
+          ),
+        ),
+      )
+    );
+  }
+
+      Widget _wegisterButton(){
+    return GestureDetector(
+      onTap: (){
+        print("Wow Grape");
+      },
+      child: Container(
+        height: _devHeight * 0.06,
+        width: _devWidth,
+        child: Text(
+          "Don't have an account yet? Register Here.",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.w700,
+            color: Colors.white60
+          ),
+        ),
+      )
+    );
+  }
+
+      Widget _megisterButton(){
+    return GestureDetector(
+      onTap: (){
+        print("Wow Grape");
+      },
+      child: Container(
+        height: _devHeight * 0.06,
+        width: _devWidth,
+        child: Text(
+          "Don't have an account yet? Register Here.",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 15,
